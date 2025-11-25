@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\r\n\ The\ Animal\ class\ represents\ the\ general\ characteristics\ and\ behavior\r\n\ shared\ by\ all\ animals\ that\ exist\ in\ the\ valley.\r\n\ It\ defines\ basic\ attributes\ such\ as\ energy\ and\ days,\ and\ provides\r\n\ common\ methods\ like\ moving\ one\ step,\ eating,\ and\ checking\ if\ the\r\n\ object\ is\ an\ animal.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=Animal()
+comment1.text=\r\n\ Creates\ a\ new\ Animal\ with\ full\ energy\ (100)\ and\ zero\ days.\r\n
+comment2.params=
+comment2.target=boolean\ step()
+comment2.text=\r\n\ Simulates\ one\ step\ of\ the\ animal's\ life\ cycle.\r\n\ Each\ step\ consumes\ one\ energy\ point\ if\ the\ animal\ has\ energy\ left.\r\n\r\n\ @return\ true\ if\ the\ animal\ could\ take\ the\ step;\ false\ if\ it\ had\ no\ energy.\r\n
+comment3.params=
+comment3.target=void\ eat()
+comment3.text=\r\n\ Restores\ the\ animal's\ energy\ to\ the\ maximum\ level\ (100),\r\n\ representing\ the\ act\ of\ eating.\r\n
+comment4.params=
+comment4.target=int\ getEnergy()
+comment4.text=\r\n\ Returns\ the\ current\ energy\ level\ of\ the\ animal.\r\n\r\n\ @return\ integer\ representing\ the\ energy\ value\ (0\ to\ 100).\r\n
+comment5.params=energy
+comment5.target=int\ setEnergy(int)
+comment6.params=
+comment6.target=boolean\ isAnimal()
+comment6.text=\r\n\ Confirms\ that\ this\ object\ is\ an\ animal.\r\n\r\n\ @return\ always\ true,\ since\ all\ instances\ of\ this\ class\ are\ animals.\r\n
+numComments=7

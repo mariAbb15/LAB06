@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=HayTest
+comment0.text=\r\n\ Unit\ tests\ for\ the\ Hay\ class.\r\n\ Verifies\ correct\ color\ alternation\ and\ basic\ behavior.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\r\n\ Sets\ up\ a\ fresh\ test\ environment\ before\ each\ test.\r\n\ Creates\ a\ new\ valley\ and\ a\ new\ hay\ unit\ at\ position\ (5,5).\r\n
+comment2.params=
+comment2.target=void\ testInitialColorIsYellow()
+comment2.text=\r\n\ Test\ 1\:\ Verifies\ that\ the\ hay\ starts\ with\ YELLOW\ color.\r\n
+comment3.params=
+comment3.target=void\ testColorAlternatesAfterAct()
+comment3.text=\r\n\ Test\ 2\:\ Verifies\ that\ the\ hay\ alternates\ its\ color\ after\ one\ act()\ call.\r\n
+comment4.params=
+comment4.target=void\ testColorSequence()
+comment4.text=\r\n\ Test\ 3\:\ Verifies\ the\ exact\ color\ alternation\ sequence\:\r\n\ YELLOW\ \u2192\ RED\ \u2192\ YELLOW\ \u2192\ RED\ \u2192\ YELLOW\r\n
+comment5.params=
+comment5.target=void\ testShapeIsSquare()
+comment5.text=\r\n\ Test\ 4\:\ Verifies\ that\ hay\ shape\ is\ SQUARE.\r\n
+comment6.params=
+comment6.target=void\ tearDown()
+comment6.text=\r\n\ Cleans\ up\ test\ environment\ after\ each\ test.\r\n\ Sets\ valley\ and\ hay\ references\ to\ null.\r\n
+numComments=7

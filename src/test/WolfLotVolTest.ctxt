@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=WolfLotVolTest
+comment0.text=\r\n\ Unit\ tests\ for\ the\ WolfLotVol\ class\ (Bonus\ Cycle\ 6).\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testInitialEnergy()
+comment2.text=\r\n\ Test\ 1\:\ Verifies\ wolf\ starts\ with\ 100\ energy.\r\n
+comment3.params=
+comment3.target=void\ testColorIsBlack()
+comment3.text=\r\n\ Test\ 2\:\ Verifies\ wolf\ has\ BLACK\ color.\r\n
+comment4.params=
+comment4.target=void\ testWolfHuntsSheepLotVol()
+comment4.text=\r\n\ Test\ 3\:\ Verifies\ wolf\ hunts\ SheepLotVol\ and\ gains\ energy.\r\n
+comment5.params=
+comment5.target=void\ testWolfReproduction()
+comment5.text=\r\n\ Test\ 4\:\ Verifies\ wolf\ reproduction\ creates\ new\ wolf.\r\n
+comment6.params=
+comment6.target=void\ testWolfIsAnimal()
+comment6.text=\r\n\ Test\ 5\:\ Verifies\ wolf\ is\ an\ Animal.\r\n
+comment7.params=
+comment7.target=void\ tearDown()
+numComments=8

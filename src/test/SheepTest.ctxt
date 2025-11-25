@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=SheepTest
+comment0.text=\r\n\ The\ SheepTest\ class\ performs\ unit\ tests\ for\ the\ Sheep\ class.\r\n\ It\ verifies\ correct\ behavior\ for\ initial\ energy,\ movement,\r\n\ energy\ recovery,\ and\ death\ when\ near\ a\ wolf.\r\n\r\n\ Each\ test\ creates\ a\ new\ valley\ and\ sheep\ instance\ to\ ensure\r\n\ isolated\ and\ repeatable\ test\ conditions.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\r\n\ Sets\ up\ the\ test\ environment\ before\ each\ test.\r\n\ Creates\ a\ new\ valley\ and\ a\ sheep\ at\ a\ specific\ position.\r\n
+comment2.params=
+comment2.target=void\ testInitialEnergy()
+comment2.text=\r\n\ Test\ 1\:\ Verifies\ that\ the\ sheep\ starts\ with\ an\ energy\ value\ of\ 5.\r\n
+comment3.params=
+comment3.target=void\ testRecoverEnergyAtNorthEdge()
+comment3.text=\r\n\ Test\ 2\:\ Checks\ that\ the\ sheep\ restores\ its\ energy\ when\ reaching\r\n\ the\ north\ edge\ and\ changes\ its\ moving\ direction.\r\n
+comment4.params=
+comment4.target=void\ testDiesNearWolf()
+comment4.text=\r\n\ Test\ 3\:\ Verifies\ that\ the\ sheep\ dies\ if\ it\ is\ next\ to\ a\ wolf.\r\n
+comment5.params=
+comment5.target=void\ testGainEnergyNearSheep()
+comment5.text=\r\n\ Test\ 4\:\ Checks\ that\ the\ sheep\ gains\ energy\ when\ it\ is\ adjacent\ to\ another\ sheep.\r\n
+comment6.params=
+comment6.target=void\ tearDown()
+comment6.text=\r\n\ Cleans\ up\ the\ environment\ after\ each\ test\ to\ release\ resources.\r\n
+numComments=7

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Mammal
+comment0.text=\r\n\ The\ Mammal\ class\ defines\ the\ common\ structure\ and\ behavior\r\n\ for\ all\ mammals\ that\ exist\ in\ the\ valley,\ such\ as\ wolves\ or\ sheep.\r\n\ It\ inherits\ basic\ attributes\ from\ Animal\ and\ implements\ Unit,\r\n\ providing\ shared\ functionality\ like\ movement,\ position,\ and\ color.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=valley\ row\ column
+comment1.target=Mammal(Valley,\ int,\ int)
+comment1.text=\r\n\ Creates\ a\ new\ mammal\ in\ the\ specified\ valley\ and\ position.\r\n\ Automatically\ assigns\ it\ to\ the\ corresponding\ location\ in\ the\ grid.\r\n\r\n\ @param\ valley\ The\ valley\ where\ the\ mammal\ will\ be\ placed.\r\n\ @param\ row\ Row\ position\ where\ the\ mammal\ is\ located.\r\n\ @param\ column\ Column\ position\ where\ the\ mammal\ is\ located.\r\n
+comment2.params=
+comment2.target=int\ getRow()
+comment2.text=\r\n\ Returns\ the\ row\ index\ of\ the\ mammal's\ current\ position.\r\n\r\n\ @return\ integer\ representing\ the\ row\ position.\r\n
+comment3.params=
+comment3.target=int\ getColumn()
+comment3.text=\r\n\ Returns\ the\ column\ index\ of\ the\ mammal's\ current\ position.\r\n\r\n\ @return\ integer\ representing\ the\ column\ position.\r\n
+comment4.params=
+comment4.target=java.awt.Color\ getColor()
+comment4.text=\r\n\ Returns\ the\ color\ used\ to\ represent\ the\ mammal\ on\ the\ screen.\r\n\r\n\ @return\ a\ Color\ object\ representing\ the\ mammal's\ color.\r\n
+comment5.params=r\ c
+comment5.target=boolean\ move(int,\ int)
+comment5.text=\r\n\ Moves\ the\ mammal\ to\ a\ new\ position\ inside\ the\ valley\ if\ the\ destination\r\n\ is\ within\ bounds\ and\ empty.\ Each\ movement\ consumes\ one\ energy\ point.\r\n\ If\ the\ mammal\ has\ no\ energy\ left,\ it\ dies.\r\n\r\n\ @param\ r\ Target\ row\ position.\r\n\ @param\ c\ Target\ column\ position.\r\n\ @return\ true\ if\ the\ movement\ was\ successful;\ false\ otherwise.\r\n
+comment6.params=
+comment6.target=void\ die()
+comment6.text=\r\n\ Removes\ the\ mammal\ from\ the\ valley,\ representing\ its\ death.\r\n\ The\ cell\ it\ occupied\ becomes\ empty.\r\n
+numComments=7

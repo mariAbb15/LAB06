@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=SheepLotVol
+comment0.text=\r\n\ The\ SheepLotVol\ class\ represents\ a\ sheep\ following\ the\ Lotka-Volterra\ model.\r\n\ It\ moves\ randomly,\ eats\ HAY\ ONLY\ (not\ grass),\ and\ can\ reproduce\ with\ nearby\ sheep.\r\n\ Dies\ ONLY\ when\ near\ a\ WolfLotVol\ (not\ regular\ Wolf).\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=valley\ row\ column
+comment1.target=SheepLotVol(Valley,\ int,\ int)
+comment1.text=\r\n\ Creates\ a\ new\ SheepLotVol\ in\ the\ specified\ valley\ and\ position.\r\n\r\n\ @param\ valley\ The\ valley\ where\ the\ sheep\ will\ be\ placed.\r\n\ @param\ row\ Initial\ row\ position.\r\n\ @param\ column\ Initial\ column\ position.\r\n
+comment2.params=valley\ row\ column\ skipFirstTurn
+comment2.target=SheepLotVol(Valley,\ int,\ int,\ boolean)
+comment2.text=\r\n\ Creates\ a\ new\ SheepLotVol\ that\ won't\ act\ this\ turn\ (newborn).\r\n
+comment3.params=
+comment3.target=int\ getShape()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=boolean\ checkForWolvesLotVol()
+comment5.text=\r\n\ Checks\ if\ there\ are\ WolfLotVol\ nearby\ (ONLY\ WolfLotVol,\ not\ regular\ Wolf).\r\n\r\n\ @return\ true\ if\ a\ WolfLotVol\ is\ detected,\ false\ otherwise.\r\n
+comment6.params=
+comment6.target=void\ eatNearbyHay()
+comment6.text=\r\n\ Eats\ nearby\ HAY\ ONLY\ (not\ grass)\ to\ gain\ energy.\r\n\ Gains\ 10%\ of\ current\ energy\ when\ eating\ hay.\r\n
+comment7.params=
+comment7.target=void\ tryReproduce()
+comment7.text=\r\n\ Attempts\ to\ reproduce\ with\ a\ nearby\ SheepLotVol\ if\ there's\ an\ empty\ adjacent\ cell.\r\n
+comment8.params=
+comment8.target=void\ moveRandomly()
+comment8.text=\r\n\ Moves\ the\ sheep\ randomly\ to\ an\ adjacent\ cell.\r\n
+numComments=9

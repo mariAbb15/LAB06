@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Sheep
+comment0.text=\r\n\ The\ Sheep\ class\ represents\ a\ sheep\ that\ lives\ and\ moves\ inside\ the\ valley.\r\n\ It\ extends\ the\ Mammal\ class\ and\ defines\ specific\ behavior\ for\ the\ sheep\:\r\n\ -\ Moves\ from\ north\ to\ south\ and\ back.\r\n\ -\ Recovers\ energy\ when\ reaching\ the\ edge\ or\ when\ near\ another\ sheep.\r\n\ -\ Dies\ when\ adjacent\ to\ a\ wolf.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=valley\ row\ column
+comment1.target=Sheep(Valley,\ int,\ int)
+comment1.text=\r\n\ Creates\ a\ new\ sheep\ inside\ the\ specified\ valley\ at\ the\ given\ position.\r\n\ The\ sheep\ starts\ moving\ north\ with\ an\ initial\ energy\ value\ reduced\r\n\ through\ several\ steps.\r\n\r\n\ @param\ valley\ The\ valley\ the\ sheep\ belongs\ to.\r\n\ @param\ row\ Initial\ row\ position.\r\n\ @param\ column\ Initial\ column\ position.\r\n
+comment2.params=
+comment2.target=int\ getShape()
+comment2.text=\r\n\ Returns\ the\ shape\ type\ of\ this\ sheep.\r\n\ Sheep\ are\ represented\ as\ squares.\r\n\r\n\ @return\ integer\ value\ representing\ a\ square\ shape.\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Defines\ the\ behavior\ of\ the\ sheep\ for\ one\ simulation\ step.\r\n\ The\ sheep\ moves\ north\ or\ south\ depending\ on\ its\ direction,\r\n\ restores\ energy\ at\ the\ north\ edge,\ and\ dies\ if\ near\ a\ wolf.\r\n
+comment4.params=
+comment4.target=void\ checkNeighbors()
+comment4.text=\r\n\ Checks\ the\ neighboring\ cells\ around\ the\ sheep.\r\n\ -\ If\ a\ wolf\ is\ found\ nearby,\ the\ sheep\ dies.\r\n\ -\ If\ another\ sheep\ is\ nearby,\ it\ slightly\ restores\ energy.\r\n
+numComments=5

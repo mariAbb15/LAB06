@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Wolf
+comment0.text=\r\n\ The\ Wolf\ class\ represents\ a\ wolf\ that\ lives\ in\ the\ valley.\r\n\ It\ extends\ the\ Mammal\ class\ and\ defines\ specific\ behavior\ for\ wolves\:\r\n\ -\ Moves\ randomly\ around\ the\ valley.\r\n\ -\ Dies\ when\ its\ energy\ reaches\ zero.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=valley\ row\ column
+comment1.target=Wolf(Valley,\ int,\ int)
+comment1.text=\r\n\ Creates\ a\ new\ wolf\ in\ the\ specified\ valley\ and\ position.\r\n\ The\ wolf\ is\ represented\ in\ black\ color.\r\n\r\n\ @param\ valley\ The\ valley\ where\ the\ wolf\ will\ be\ placed.\r\n\ @param\ row\ Initial\ row\ position.\r\n\ @param\ column\ Initial\ column\ position.\r\n
+comment2.params=
+comment2.target=int\ getShape()
+comment2.text=\r\n\ Returns\ the\ shape\ type\ of\ this\ wolf.\r\n\ Wolves\ are\ represented\ as\ circles.\r\n\r\n\ @return\ integer\ value\ representing\ a\ round\ shape.\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Defines\ the\ behavior\ of\ the\ wolf\ for\ one\ simulation\ step.\r\n\ The\ wolf\ moves\ randomly\ around\ its\ current\ position.\r\n\ If\ its\ energy\ reaches\ zero,\ it\ dies\ and\ disappears\ from\ the\ valley.\r\n
+numComments=4

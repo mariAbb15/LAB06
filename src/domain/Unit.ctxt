@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Unit
+comment0.text=\r\n\ The\ Unit\ interface\ defines\ the\ basic\ behavior\ and\ properties\r\n\ of\ all\ elements\ that\ can\ exist\ inside\ the\ valley,\ such\ as\ animals\ or\ resources.\r\n\ Each\ unit\ knows\ how\ to\ act\ during\ a\ simulation\ step\ and\ how\ it\ should\ be\ drawn\r\n\ within\ the\ graphical\ representation\ of\ the\ valley.\r\n\r\n\ This\ interface\ provides\ default\ behaviors\ for\ most\ methods\ so\ that\r\n\ subclasses\ can\ override\ only\ what\ they\ need.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Defines\ the\ specific\ behavior\ of\ the\ unit\ during\ one\ simulation\ step.\r\n\ Each\ concrete\ class\ (like\ Wolf,\ Sheep,\ or\ Grass)\ must\ implement\r\n\ this\ method\ to\ describe\ its\ own\ actions\ in\ the\ valley.\r\n
+comment2.params=
+comment2.target=int\ shape()
+comment2.text=\r\n\ Returns\ the\ shape\ type\ of\ the\ unit\ (square\ or\ round).\r\n\ By\ default,\ all\ units\ are\ square\ unless\ overridden.\r\n\r\n\ @return\ an\ integer\ constant\ representing\ the\ shape\ type.\r\n
+comment3.params=
+comment3.target=java.awt.Color\ getColor()
+comment3.text=\r\n\ Returns\ the\ color\ used\ to\ represent\ this\ unit\ on\ the\ grid.\r\n\ By\ default,\ all\ units\ are\ black.\r\n\r\n\ @return\ a\ Color\ object\ representing\ the\ unit's\ color.\r\n
+comment4.params=
+comment4.target=boolean\ isResource()
+comment4.text=\r\n\ Indicates\ whether\ this\ unit\ is\ a\ resource\ (for\ example,\ grass\ or\ hay).\r\n\ By\ default,\ all\ units\ are\ considered\ resources.\r\n\r\n\ @return\ true\ if\ the\ unit\ is\ a\ resource;\ false\ otherwise.\r\n
+comment5.params=
+comment5.target=boolean\ isAnimal()
+comment5.text=\r\n\ Indicates\ whether\ this\ unit\ is\ an\ animal\ (for\ example,\ wolf\ or\ sheep).\r\n\ By\ default,\ units\ are\ not\ animals\ unless\ overridden.\r\n\r\n\ @return\ true\ if\ the\ unit\ is\ an\ animal;\ false\ otherwise.\r\n
+numComments=6

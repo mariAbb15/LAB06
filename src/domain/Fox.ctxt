@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Fox
+comment0.text=\r\n\ The\ Fox\ class\ represents\ a\ fox\ that\ lives\ in\ the\ valley.\r\n\ It\ extends\ the\ Mammal\ class\ and\ defines\ specific\ behavior\ for\ foxes\:\r\n\ -\ Moves\ horizontally\ (east\ to\ west).\r\n\ -\ Hunts\ nearby\ sheep\ to\ gain\ energy.\r\n\ -\ Dies\ when\ its\ energy\ reaches\ zero.\r\n\r\n\ This\ class\ introduces\ a\ new\ species\ to\ the\ simulation,\r\n\ following\ the\ same\ behavioral\ structure\ as\ wolves\ and\ sheep.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=valley\ row\ column
+comment1.target=Fox(Valley,\ int,\ int)
+comment1.text=\r\n\ Creates\ a\ new\ fox\ in\ the\ specified\ valley\ and\ position.\r\n\ The\ fox\ is\ represented\ in\ orange\ color\ with\ 60\ initial\ energy.\r\n\r\n\ @param\ valley\ The\ valley\ where\ the\ fox\ will\ be\ placed.\r\n\ @param\ row\ Initial\ row\ position.\r\n\ @param\ column\ Initial\ column\ position.\r\n
+comment2.params=
+comment2.target=int\ getShape()
+comment2.text=\r\n\ Returns\ the\ shape\ type\ of\ this\ fox.\r\n\ Foxes\ are\ represented\ as\ circles.\r\n\r\n\ @return\ integer\ value\ representing\ a\ round\ shape.\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Defines\ the\ behavior\ of\ the\ fox\ for\ one\ simulation\ step.\r\n\ The\ fox\ moves\ horizontally\ (east-west)\ and\ hunts\ nearby\ sheep.\r\n
+comment4.params=
+comment4.target=void\ moveHorizontally()
+comment4.text=\r\n\ Moves\ the\ fox\ horizontally\ across\ the\ valley.\r\n\ Changes\ direction\ when\ reaching\ the\ edges.\r\n
+comment5.params=
+comment5.target=void\ huntNearby()
+comment5.text=\r\n\ Checks\ neighboring\ cells\ for\ sheep\ to\ hunt.\r\n\ If\ a\ sheep\ is\ found,\ the\ fox\ eats\ it\ and\ gains\ 50%\ of\ the\ sheep's\ energy.\r\n
+numComments=6

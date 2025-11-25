@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Hay
+comment0.text=\r\n\ The\ Hay\ class\ represents\ a\ hay\ package\ located\ inside\ the\ valley.\r\n\ Its\ main\ behavior\ is\ to\ alternate\ its\ color\ between\ red\ and\ yellow\r\n\ every\ simulation\ step\ (tic-tac).\r\n\r\n\ Hay\ is\ a\ static,\ non-animal\ unit\ that\ visually\ changes\ over\ time\r\n\ to\ represent\ growth\ or\ decay.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=x\ y\ valley
+comment1.target=Hay(int,\ int,\ Valley)
+comment1.text=\r\n\ Creates\ a\ new\ Hay\ unit\ in\ the\ given\ position\ inside\ the\ valley.\r\n\ The\ hay\ starts\ in\ yellow\ color.\r\n\r\n\ @param\ x\ X\ coordinate\ of\ the\ hay\ position.\r\n\ @param\ y\ Y\ coordinate\ of\ the\ hay\ position.\r\n\ @param\ valley\ Reference\ to\ the\ valley\ where\ the\ hay\ is\ placed.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Executes\ the\ hay\ behavior\ on\ each\ tic-tac\ (simulation\ step).\r\n\ Alternates\ the\ color\ between\ red\ and\ yellow.\r\n
+comment3.params=
+comment3.target=java.awt.Color\ getColor()
+comment3.text=\r\n\ Returns\ the\ color\ currently\ used\ to\ represent\ the\ hay.\r\n\r\n\ @return\ The\ current\ Color\ object.\r\n
+comment4.params=
+comment4.target=int\ shape()
+comment4.text=\r\n\ Returns\ the\ shape\ type\ of\ this\ hay\ unit.\r\n\ Hay\ is\ represented\ as\ a\ square.\r\n\r\n\ @return\ integer\ value\ 2\ (square\ shape).\r\n
+comment5.params=
+comment5.target=int\ getX()
+comment5.text=\r\n\ Returns\ the\ X\ position\ (column)\ of\ the\ hay\ in\ the\ valley.\r\n\r\n\ @return\ integer\ value\ for\ X\ position.\r\n
+comment6.params=
+comment6.target=int\ getY()
+comment6.text=\r\n\ Returns\ the\ Y\ position\ (row)\ of\ the\ hay\ in\ the\ valley.\r\n\r\n\ @return\ integer\ value\ for\ Y\ position.\r\n
+numComments=7

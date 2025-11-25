@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=FoxTest
+comment0.text=\r\n\ Unit\ tests\ for\ the\ Fox\ class.\r\n\ These\ tests\ verify\ correct\ initialization,\ color,\r\n\ movement,\ hunting\ behavior,\ and\ inheritance.\r\n\r\n\ Each\ test\ starts\ with\ a\ new\ valley\ and\ a\ fox\ instance\r\n\ to\ ensure\ isolation\ and\ consistency\ across\ runs.\r\n\r\n\ @author\ Alejandra\ Beltran\ -\ Adrian\ Ducuara\r\n\ @version\ 2025-2\r\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\r\n\ Sets\ up\ a\ new\ valley\ and\ fox\ before\ each\ test.\r\n
+comment2.params=
+comment2.target=void\ testInitialEnergy()
+comment2.text=\r\n\ Test\ 1\:\ Verifies\ that\ the\ fox\ starts\ with\ 60\ energy\ points.\r\n
+comment3.params=
+comment3.target=void\ testColorIsOrange()
+comment3.text=\r\n\ Test\ 2\:\ Verifies\ that\ the\ fox\ is\ colored\ ORANGE.\r\n
+comment4.params=
+comment4.target=void\ testHorizontalMovement()
+comment4.text=\r\n\ Test\ 3\:\ Verifies\ horizontal\ movement\ (east\ direction).\r\n\ The\ fox\ should\ move\ to\ an\ adjacent\ column\r\n\ while\ staying\ in\ the\ same\ row.\r\n
+comment5.params=
+comment5.target=void\ testFoxHuntsSheep()
+comment5.text=\r\n\ Test\ 4\:\ Verifies\ that\ the\ fox\ hunts\ nearby\ sheep.\r\n\ The\ sheep\ should\ die\ and\ the\ fox\ should\ gain\ energy.\r\n
+comment6.params=
+comment6.target=void\ testFoxIsAnimal()
+comment6.text=\r\n\ Test\ 5\:\ Verifies\ that\ the\ fox\ is\ recognized\ as\ an\ Animal.\r\n
+comment7.params=
+comment7.target=void\ tearDown()
+comment7.text=\r\n\ Cleans\ up\ test\ references\ after\ each\ test.\r\n
+numComments=8
