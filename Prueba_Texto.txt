@@ -1,1 +1,6 @@
-Pruebas de texto
+Wolf 10 10
+Wolf 15 15
+Sheep 3 4
+Sheep 6 8
+Hay 0 0
+Hay 0 24

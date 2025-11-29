@@ -15,7 +15,7 @@ import java.util.*;
  */
 public class Valley {
 
-    // Tamaño del valle (número de filas y columnas de la cuadrícula).
+    // Tamaño del valle (numero de filas y columnas de la cuadricula).
     static private int SIZE = 25;
 
     // Matriz bidimensional que almacena las unidades (animales y recursos).
@@ -29,7 +29,7 @@ public class Valley {
     public Valley() {
         places = new Unit[SIZE][SIZE];
 
-        // Inicializa todas las posiciones como vacías
+        // Inicializa todas las posiciones como vacias
         for (int r = 0; r < SIZE; r++) {
             for (int c = 0; c < SIZE; c++) {
                 places[r][c] = null;
@@ -106,11 +106,11 @@ public class Valley {
         //Grass extraGrass2 = new Grass(12, 18, this);
         
         // Bono
-        // Lobos LotVol (cerca entre sí para reproducción)
+        // Lobos LotVol (cerca entre si para reproduccion)
         //WolfLotVol wolfLV1 = new WolfLotVol(this, 20, 5);
         //WolfLotVol wolfLV2 = new WolfLotVol(this, 21, 6);
         
-        // Ovejas LotVol (cerca entre sí para reproducción)
+        // Ovejas LotVol (cerca entre si para reproduccion)
         //SheepLotVol sheepLV1 = new SheepLotVol(this, 5, 20);
         //SheepLotVol sheepLV2 = new SheepLotVol(this, 6, 21);
         
@@ -136,7 +136,7 @@ public class Valley {
         if (inValley(r, c) && places[r][c] != null) {
             for (int dr = -1; dr < 2; dr++) {
                 for (int dc = -1; dc < 2; dc++) {
-                    // Verifica que no sea la misma posición y que esté dentro del valle
+                    // Verifica que no sea la misma posicion y que este dentro del valle
                     if ((dr != 0 || dc != 0) && inValley(r + dr, c + dc)
                             && (places[r + dr][c + dc] != null)
                             && (places[r][c].getClass() == places[r + dr][c + dc].getClass())) {

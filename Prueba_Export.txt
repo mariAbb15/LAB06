@@ -1,0 +1,4 @@
+Sheep 3 4
+Sheep 6 8
+Wolf 10 10
+Wolf 15 15

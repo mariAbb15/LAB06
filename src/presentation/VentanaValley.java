@@ -2,7 +2,7 @@ package presentation;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.io.File;
+import java.io.*;
 import domain.*;
 
 /**
@@ -24,6 +24,7 @@ public class VentanaValley extends JFrame {
     private JMenuItem itemSalir;
     
     private Fachada fachada;
+    private ValleyGUI valleyGUI;
     
     public VentanaValley() {
         super("Valley");
@@ -183,6 +184,11 @@ public class VentanaValley extends JFrame {
             try {
                 File file = fileChooser.getSelectedFile();
                 fachada.importFile(file);
+
+                if (valleyGUI != null) {
+                    valleyGUI.dispose();
+                }
+
                 JOptionPane.showMessageDialog(this, "Archivo importado correctamente");
             } catch (ValleyException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), 
