@@ -48,13 +48,28 @@ public class Fachada {
 
     /**
      * Imports valley data from a text file.
+     */
+    public void importFile(File archivo) throws ValleyException {
+        throw new ValleyException("Opcion import en construccion. Archivo " + archivo.getName());
+    }
+
+    /**
+     * Exports valley data to a text file.
+     */
+    public void export(File archivo) throws ValleyException {
+        throw new ValleyException("Opcion export en construccion. Archivo " + archivo.getName());
+    }
+    
+
+    /**
+     * Imports valley data from a text file.
      * Expected format: TypeName row column (one unit per line)
      * Example: Wolf 10 10
      * 
      * @param archivo File to import valley data from (.txt extension)
      * @throws ValleyException if file cannot be read or format is invalid
      */
-    public void importFile(File archivo) throws ValleyException {
+    public void importFile00(File archivo) throws ValleyException {
         BufferedReader reader = null;
         
         try {
@@ -166,7 +181,7 @@ public class Fachada {
      * @param archivo File to export valley data to (.txt extension)
      * @throws ValleyException if file cannot be written
      */
-    public void export(File archivo) throws ValleyException {
+    public void export00(File archivo) throws ValleyException {
         PrintWriter writer = null;
         
         try {

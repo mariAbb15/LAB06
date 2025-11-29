@@ -183,7 +183,7 @@ public class VentanaValley extends JFrame {
         if (result == JFileChooser.APPROVE_OPTION) {
             try {
                 File file = fileChooser.getSelectedFile();
-                fachada.importFile(file);
+                fachada.importFile00(file);
 
                 if (valleyGUI != null) {
                     valleyGUI.dispose();
@@ -212,7 +212,7 @@ public class VentanaValley extends JFrame {
                 if (!file.getName().endsWith(".txt")) {
                     file = new File(file.getAbsolutePath() + ".txt");
                 }
-                fachada.export(file);
+                fachada.export00(file);
                 JOptionPane.showMessageDialog(this, "Archivo exportado correctamente");
             } catch (ValleyException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), 
