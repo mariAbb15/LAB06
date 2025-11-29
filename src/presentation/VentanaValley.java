@@ -1,13 +1,14 @@
 package presentation;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import domain.*;
 
 /**
- * Main window with menu bar for Valley simulation.
- * Provides file operations: new, open, save, import, export, exit.
+ * Main window with menu bar and valley visualization for Valley simulation.
+ * Integrates menu operations with graphical display of the valley.
  *
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
@@ -24,16 +25,22 @@ public class VentanaValley extends JFrame {
     private JMenuItem itemSalir;
     
     private Fachada fachada;
-    private ValleyGUI valleyGUI;
+    private PhotoValleyPanel photoValley;
+    private JButton ticTacButton;
+    
+    public static final int SIDE = 20;
     
     public VentanaValley() {
-        super("Valley");
+        super("Valley Simulation");
         fachada = new Fachada();
         prepareElementsMenu();
+        prepareElementsView();
         prepareActionsMenu();
         
-        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setResizable(false);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -70,6 +77,25 @@ public class VentanaValley extends JFrame {
 
         itemSalir = new JMenuItem("Salir");
         menuArchivo.add(itemSalir);
+    }
+
+    /**
+     * Prepares the valley visualization panel and control button.
+     */
+    private void prepareElementsView() {
+        photoValley = new PhotoValleyPanel(this);
+        ticTacButton = new JButton("Tic-tac");
+        
+        setLayout(new BorderLayout());
+        add(photoValley, BorderLayout.CENTER);
+        add(ticTacButton, BorderLayout.SOUTH);
+        
+        ticTacButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                fachada.getValley().ticTac();
+                photoValley.repaint();
+            }
+        });
     }
 
     /**
@@ -119,6 +145,7 @@ public class VentanaValley extends JFrame {
     private void optionNew() {
         try {
             fachada.newValley();
+            photoValley.repaint();
             JOptionPane.showMessageDialog(this, "Nuevo valle creado exitosamente");
         } catch (ValleyException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), 
@@ -139,6 +166,7 @@ public class VentanaValley extends JFrame {
             try {
                 File file = fileChooser.getSelectedFile();
                 fachada.open(file);
+                photoValley.repaint();
                 JOptionPane.showMessageDialog(this, "Archivo abierto correctamente");
             } catch (ValleyException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), 
@@ -184,11 +212,7 @@ public class VentanaValley extends JFrame {
             try {
                 File file = fileChooser.getSelectedFile();
                 fachada.importFile00(file);
-
-                if (valleyGUI != null) {
-                    valleyGUI.dispose();
-                }
-
+                photoValley.repaint();
                 JOptionPane.showMessageDialog(this, "Archivo importado correctamente");
             } catch (ValleyException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), 
@@ -234,6 +258,110 @@ public class VentanaValley extends JFrame {
         
         if (opcion == JOptionPane.YES_OPTION) {
             System.exit(0);
+        }
+    }
+    
+    /**
+     * Returns the current valley from the facade.
+     * Used by PhotoValleyPanel to render the valley.
+     */
+    public Valley getValley() {
+        return fachada.getValley();
+    }
+}
+
+/**
+ * The PhotoValleyPanel class is responsible for drawing the valley 
+ * within VentanaValley.
+ * It extends JPanel and paints a grid where each unit is represented
+ * according to its type (shape, color, and energy if applicable).
+ *
+ * @author Alejandra Beltran - Adrian Ducuara
+ * @version 2025-2
+ */
+class PhotoValleyPanel extends JPanel {
+
+    private VentanaValley ventana;
+
+    /**
+     * Constructs a new PhotoValleyPanel linked to the given VentanaValley.
+     *
+     * @param ventana Main window that holds the valley model.
+     */
+    public PhotoValleyPanel(VentanaValley ventana) {
+        this.ventana = ventana;
+        setBackground(Color.white);
+        int size = ventana.getValley().getSize();
+        setPreferredSize(new Dimension(
+            VentanaValley.SIDE * size + 10, 
+            VentanaValley.SIDE * size + 10
+        ));
+    }
+
+    /**
+     * Draws the grid representing the valley and all units in it.
+     * Automatically called by Swing when the panel needs to be redrawn.
+     *
+     * @param g Graphics object used for drawing operations.
+     */
+    @Override
+    public void paintComponent(Graphics g) {
+        Valley theValley = ventana.getValley();
+        super.paintComponent(g);
+
+        int size = theValley.getSize();
+
+        // Draw grid lines
+        for (int c = 0; c <= size; c++) {
+            g.drawLine(c * VentanaValley.SIDE, 0, 
+                      c * VentanaValley.SIDE, size * VentanaValley.SIDE);
+        }
+        for (int f = 0; f <= size; f++) {
+            g.drawLine(0, f * VentanaValley.SIDE, 
+                      size * VentanaValley.SIDE, f * VentanaValley.SIDE);
+        }
+
+        // Draw units
+        for (int f = 0; f < size; f++) {
+            for (int c = 0; c < size; c++) {
+                Unit unit = theValley.getUnit(f, c);
+                
+                if (unit != null) {
+                    g.setColor(unit.getColor());
+
+                    if (unit.shape() == Unit.SQUARE) {
+                        g.fillRoundRect(
+                            VentanaValley.SIDE * c + 1, 
+                            VentanaValley.SIDE * f + 1, 
+                            VentanaValley.SIDE - 2, 
+                            VentanaValley.SIDE - 2, 
+                            2, 2
+                        );
+                    } else {
+                        g.fillOval(
+                            VentanaValley.SIDE * c + 1, 
+                            VentanaValley.SIDE * f + 1, 
+                            VentanaValley.SIDE - 2, 
+                            VentanaValley.SIDE - 2
+                        );
+                    }
+
+                    // Show energy indicator for animals
+                    if (unit.isAnimal()) {
+                        g.setColor(Color.red);
+                        Animal animal = (Animal) unit;
+                        if (animal.getEnergy() >= 50) {
+                            g.drawString("u", 
+                                VentanaValley.SIDE * c + 6, 
+                                VentanaValley.SIDE * f + 15);
+                        } else {
+                            g.drawString("~", 
+                                VentanaValley.SIDE * c + 6, 
+                                VentanaValley.SIDE * f + 17);
+                        }
+                    }
+                }
+            }
         }
     }
 }
