@@ -1,6 +1,7 @@
 package domain;
 
 import java.util.*;
+import java.io.Serializable;
 
 /**
  * The Valley class represents the simulation environment where all units
@@ -13,7 +14,9 @@ import java.util.*;
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
  */
-public class Valley {
+public class Valley implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     // Tamaño del valle (numero de filas y columnas de la cuadricula).
     static private int SIZE = 25;

@@ -1,0 +1,6 @@
+Hay 0 0
+Sheep 0 4
+Hay 0 24
+Sheep 3 8
+Wolf 14 10
+Wolf 15 14

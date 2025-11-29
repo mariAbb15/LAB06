@@ -1,6 +1,6 @@
-Wolf 10 10
-Wolf 15 15
-Sheep 3 4
-Sheep 6 8
-Hay 0 0
-Hay 0 24
+Wolf 20 5
+Wolf 15 24
+Sheep 10 14
+Sheep 3 18
+Hay 10 15
+Hay 20 11

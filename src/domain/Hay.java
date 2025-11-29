@@ -1,6 +1,7 @@
 package domain;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 /**
  * The Hay class represents a hay package located inside the valley.
@@ -13,7 +14,9 @@ import java.awt.Color;
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
  */
-public class Hay implements Unit {
+public class Hay implements Unit, Serializable {
+    
+    private static final long serialVersionUID = 1L;
 
     // Posición del heno dentro de la cuadrícula del valle
     private int x, y;

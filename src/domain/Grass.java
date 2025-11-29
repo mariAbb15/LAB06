@@ -1,6 +1,7 @@
 package domain;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 /**
  * The Grass class represents grass in the valley, serving as a food source
@@ -13,7 +14,9 @@ import java.awt.Color;
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
  */
-public class Grass implements Unit {
+public class Grass implements Unit, Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private int x, y;
     private Valley valley;

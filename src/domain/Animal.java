@@ -1,6 +1,7 @@
 package domain;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 /**
  * The Animal class represents the general characteristics and behavior
@@ -12,7 +13,9 @@ import java.awt.Color;
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
  */
-public abstract class Animal {
+public abstract class Animal implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
     // Días que han pasado desde que el animal fue creado o comenzó la simulación.
     private int days;

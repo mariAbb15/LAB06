@@ -1,6 +1,7 @@
 package domain;
 
 import java.awt.Color;
+import java.io.Serializable;
 
 /**
  * The Mammal class defines the common structure and behavior
@@ -11,7 +12,9 @@ import java.awt.Color;
  * @author Alejandra Beltran - Adrian Ducuara
  * @version 2025-2
  */
-public abstract class Mammal extends Animal implements Unit {
+public abstract class Mammal extends Animal implements Unit, Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     // Referencia al valle donde el mamífero existe y se mueve.
     private Valley valley;
