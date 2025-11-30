@@ -211,7 +211,7 @@ public class VentanaValley extends JFrame {
         if (result == JFileChooser.APPROVE_OPTION) {
             try {
                 File file = fileChooser.getSelectedFile();
-                fachada.importFile00(file);
+                fachada.importFile(file);
                 photoValley.repaint();
                 JOptionPane.showMessageDialog(this, "Archivo importado correctamente");
             } catch (ValleyException ex) {
@@ -236,7 +236,7 @@ public class VentanaValley extends JFrame {
                 if (!file.getName().endsWith(".txt")) {
                     file = new File(file.getAbsolutePath() + ".txt");
                 }
-                fachada.export00(file);
+                fachada.export(file);
                 JOptionPane.showMessageDialog(this, "Archivo exportado correctamente");
             } catch (ValleyException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), 
